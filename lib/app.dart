@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_3_todo_list/pages/home_page.dart';
+import 'package:project_3_todo_list/pages/home/home_page.dart';
 
 class App extends StatelessWidget {
   @override
