@@ -22,8 +22,8 @@ class Note extends StatelessWidget {
       child: Container(
         // Padding interno del container:
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-        // Margin esterno per separare le note tra loro:
-        margin: EdgeInsets.only(bottom: 10),
+        // Margin per separare le note tra loro e non far toccare lo schermo:
+        margin: EdgeInsets.only(bottom: 10, right: 10),
         // BoxDecoration personalizza l'aspetto visivo del container.
         // La decorazione simula l'aspetto di una card con sfondo bianco, bordi arrotondati e ombra.
         decoration: BoxDecoration(

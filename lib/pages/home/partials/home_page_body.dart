@@ -33,22 +33,18 @@ class HomePageBody extends StatelessWidget {
           SizedBox(height: 16),
           // Expanded avvolge SingleChildScrollView per consentire alle note di scorrere senza occupare troppo spazio.
           Expanded(
-            // Padding aggiunge spazio ai lati del contenuto scrollabile per evitare che le note tocchino i bordi dello schermo.
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              // SingleChildScrollView consente alle note di scorrere verticalmente se superano la lunghezza dello schermo.
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  // La mappatura delle note in widget Note consente di visualizzare dinamicamente una lista di note.
-                  children: notes
-                      .map((note) => Note(
-                            text: note,
-                            // Associa ogni nota alla funzione onDoubleTap per la rimozione.
-                            onDoubleTap: () => onNoteDelete(note),
-                          ))
-                      .toList(), // La conversione in lista è necessaria per costruire l'interfaccia utente.
-                ),
+            // SingleChildScrollView consente alle note di scorrere verticalmente se superano la lunghezza dello schermo.
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                // La mappatura delle note in widget Note consente di visualizzare dinamicamente una lista di note.
+                children: notes
+                    .map((note) => Note(
+                          text: note,
+                          // Associa ogni nota alla funzione onDoubleTap per la rimozione.
+                          onDoubleTap: () => onNoteDelete(note),
+                        ))
+                    .toList(), // La conversione in lista è necessaria per costruire l'interfaccia utente.
               ),
             ),
           ),
