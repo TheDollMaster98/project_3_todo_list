@@ -43,6 +43,23 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // Test con la Navbar:
+      // appBar: AppBar(
+      //   title: Row(
+      //     children: const [
+      //       // Questo spinge il titolo verso la fine dell'AppBar:
+      //       Spacer(),
+      //       Text(
+      //         "Agenda Random",
+      //         style: TextStyle(
+      //           fontSize: 28,
+      //           fontWeight: FontWeight.bold,
+      //         ),
+      //       ),
+      //     ],
+      //   ),
+      // ),
+
       // Utilizzo di Row per disporre la sidebar e il corpo della pagina affiancati.
       // Se usassi Stack al posto di row
       // le note andrebbero sopra la sidebar
